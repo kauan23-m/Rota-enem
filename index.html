@@ -108,9 +108,46 @@ a{color:inherit}
 header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.25rem;text-decoration:none}
 .brand img{width:34px;height:34px;display:block;flex:none}
-nav.links{display:flex;gap:18px;align-items:center;font-weight:600;font-size:.95rem}
-nav.links a{text-decoration:none;color:var(--muted)}
-nav.links a:hover{color:var(--fg)}
+/* Navegacao com bolhas: GooeyNav do React Bits portado para JS puro.
+   O efeito depende de blur+contrast sobre fundo PRETO para as bolhas
+   tomarem forma, por isso a navegacao ganha uma capsula escura propria,
+   com cor fixa nos dois temas (se usasse var(--fg) ela clarearia no
+   tema escuro e o efeito sumiria). */
+.gooey-nav{--gn-bg:#13203f;--gn-ink:#f5f6fb;--color-1:#ffd23f;--color-2:#5b7aff;--color-3:#2cc596;--color-4:#ff8a52;position:relative;isolation:isolate;background:var(--gn-bg);border-radius:999px;padding:3px}
+.gooey-nav nav.links{display:flex;position:relative;transform:translate3d(0,0,.01px)}
+.gooey-nav ul{display:flex;gap:.2em;list-style:none;padding:0;margin:0;position:relative;z-index:3;color:var(--gn-ink)}
+.gooey-nav li{border-radius:999px;position:relative;transition:color .3s ease}
+.gooey-nav li a{display:inline-block;padding:.5em .95em;text-decoration:none;color:inherit;font-weight:600;font-size:.95rem;white-space:nowrap}
+.gooey-nav li::after{content:"";position:absolute;inset:0;border-radius:999px;background:var(--gn-ink);opacity:0;transform:scale(0);transition:all .3s ease;z-index:-1}
+.gooey-nav li.active{color:var(--gn-bg)}
+.gooey-nav li.active::after{opacity:1;transform:scale(1)}
+.gooey-nav li.cta{box-shadow:inset 0 0 0 1.5px var(--gn-ink)}
+.gooey-nav li:focus-within{box-shadow:0 0 0 2px var(--gn-ink)}
+.gooey-nav .effect{position:absolute;left:0;top:0;width:0;height:0;pointer-events:none;display:grid;place-items:center;z-index:1}
+.gooey-nav .effect.text{color:var(--gn-ink);font-weight:600;font-size:.95rem;white-space:nowrap;transition:color .3s ease}
+.gooey-nav .effect.text.active{color:var(--gn-bg)}
+.gooey-nav .effect.filter{filter:blur(7px) contrast(100) blur(0);mix-blend-mode:lighten}
+.gooey-nav .effect.filter::before{content:"";position:absolute;inset:-75px;z-index:-2;background:#000}
+.gooey-nav .effect.filter::after{content:"";position:absolute;inset:0;background:var(--gn-ink);transform:scale(0);opacity:0;z-index:-1;border-radius:999px}
+.gooey-nav .effect.active::after{animation:gn-pill .3s ease both}
+@keyframes gn-pill{to{transform:scale(1);opacity:1}}
+.gooey-nav .particle,.gooey-nav .point{display:block;opacity:0;width:20px;height:20px;border-radius:100%;transform-origin:center}
+.gooey-nav .particle{--time:5s;position:absolute;top:calc(50% - 8px);left:calc(50% - 8px);animation:gn-particle calc(var(--time)) ease 1 -350ms}
+.gooey-nav .point{background:var(--color);opacity:1;animation:gn-point calc(var(--time)) ease 1 -350ms}
+@keyframes gn-particle{
+  0%{transform:rotate(0deg) translate(var(--start-x),var(--start-y));opacity:1;animation-timing-function:cubic-bezier(.55,0,1,.45)}
+  70%{transform:rotate(calc(var(--rotate)*.5)) translate(calc(var(--end-x)*1.2),calc(var(--end-y)*1.2));opacity:1;animation-timing-function:ease}
+  85%{transform:rotate(calc(var(--rotate)*.66)) translate(var(--end-x),var(--end-y));opacity:1}
+  100%{transform:rotate(calc(var(--rotate)*1.2)) translate(calc(var(--end-x)*.5),calc(var(--end-y)*.5));opacity:1}
+}
+@keyframes gn-point{
+  0%{transform:scale(0);opacity:0;animation-timing-function:cubic-bezier(.55,0,1,.45)}
+  25%{transform:scale(calc(var(--scale)*.25))}
+  38%{opacity:1}
+  65%{transform:scale(var(--scale));opacity:1;animation-timing-function:ease}
+  85%{transform:scale(var(--scale));opacity:1}
+  100%{transform:scale(0);opacity:0}
+}
 .pill{display:inline-flex;align-items:center;gap:8px;background:var(--fg);color:var(--bg)!important;padding:8px 14px;border-radius:999px}
 
 /* hero */
@@ -265,7 +302,7 @@ footer{padding-block:34px 40px;color:var(--muted);font-size:.85rem;display:grid;
 @media (max-width:560px){
   .books{grid-template-columns:1fr}
   .method{grid-template-columns:1fr}
-  nav.links a:not(.pill){display:none}
+  .gooey-nav li:not(.cta){display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}*,*::before,*::after{animation:none!important}.js .rv{opacity:1;transform:none;transition:none}.book,.m{transition:none}}
 .buy-one{margin:0 8px;font-weight:700;color:var(--blue,#2B50FF);text-decoration:underline}.about{margin-top:56px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:22px 22px 24px;max-width:760px}
@@ -326,12 +363,18 @@ footer{padding-block:34px 40px;color:var(--muted);font-size:.85rem;display:grid;
 
   <header class="top">
     <a class="brand" href="#"><img src="/assets/marca.png" alt="" width="34" height="34" decoding="async">Rota ENEM</a>
-    <nav class="links">
-      <a href="#tutorial">Como estudar</a>
-      <a href="#ebooks">Os ebooks</a>
-      <a href="#duvidas">Dúvidas</a>
-      <a class="pill" href="#ebooks">Ver ebooks</a>
-    </nav>
+    <div class="gooey-nav">
+      <nav class="links" aria-label="Seções do site">
+        <ul>
+          <li><a href="#tutorial">Como estudar</a></li>
+          <li><a href="#ebooks">Os ebooks</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li class="cta"><a href="#ebooks">Ver ebooks</a></li>
+        </ul>
+      </nav>
+      <span class="effect filter" aria-hidden="true"></span>
+      <span class="effect text" aria-hidden="true"></span>
+    </div>
   </header>
 
   <main>
@@ -733,6 +776,107 @@ renderBooks(); render();
   document.querySelectorAll(".book").forEach(function(b){
     aplicarTilt(b, 7, 6);                            // mais contido: sao quatro lado a lado
   });
+})();
+
+/* Navegacao com bolhas. Porte fiel do GooeyNav do React Bits para JS puro:
+   mesma geracao de particulas, mesmos tempos e o mesmo truque de
+   blur + contrast para as bolhas se fundirem. */
+(function(){
+  var raiz = document.querySelector(".gooey-nav");
+  if(!raiz) return;
+  var itens  = raiz.querySelectorAll("li");
+  var filtro = raiz.querySelector(".effect.filter");
+  var texto  = raiz.querySelector(".effect.text");
+  if(!itens.length || !filtro || !texto) return;
+
+  var ANIM = 600, QTD = 15, DIST = [90,10], R = 100, VARIACAO = 300;
+  var CORES = [1,2,3,1,2,3,1,4];
+  var ativo = -1;   // comeca sem nada selecionado: o visitante ainda nao escolheu
+
+  var semMovimento = window.matchMedia
+    && matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+  function ruido(n){ n = n||1; return n/2 - Math.random()*n; }
+
+  function xy(dist, i, total){
+    var ang = ((360 + ruido(8))/total) * i * (Math.PI/180);
+    return [dist*Math.cos(ang), dist*Math.sin(ang)];
+  }
+
+  function criarParticula(i, t, d, r){
+    var rot = ruido(r/10);
+    return {
+      ini: xy(d[0], QTD-i, QTD),
+      fim: xy(d[1] + ruido(7), QTD-i, QTD),
+      tempo: t,
+      escala: 1 + ruido(0.2),
+      cor: CORES[Math.floor(Math.random()*CORES.length)],
+      rot: rot > 0 ? (rot + r/20)*10 : (rot - r/20)*10
+    };
+  }
+
+  function soltarBolhas(el){
+    el.style.setProperty("--time", (ANIM*2 + VARIACAO) + "ms");
+    for(var i=0;i<QTD;i++){
+      (function(i){
+        var t = ANIM*2 + ruido(VARIACAO*2);
+        var p = criarParticula(i, t, DIST, R);
+        el.classList.remove("active");
+        setTimeout(function(){
+          var particula = document.createElement("span");
+          var ponto = document.createElement("span");
+          particula.className = "particle";
+          particula.style.setProperty("--start-x", p.ini[0]+"px");
+          particula.style.setProperty("--start-y", p.ini[1]+"px");
+          particula.style.setProperty("--end-x", p.fim[0]+"px");
+          particula.style.setProperty("--end-y", p.fim[1]+"px");
+          particula.style.setProperty("--time", p.tempo+"ms");
+          particula.style.setProperty("--scale", p.escala);
+          particula.style.setProperty("--color", "var(--color-"+p.cor+", white)");
+          particula.style.setProperty("--rotate", p.rot+"deg");
+          ponto.className = "point";
+          particula.appendChild(ponto);
+          el.appendChild(particula);
+          requestAnimationFrame(function(){ el.classList.add("active"); });
+          setTimeout(function(){ if(particula.parentNode===el) el.removeChild(particula); }, t);
+        }, 30);
+      })(i);
+    }
+  }
+
+  function posicionar(li){
+    var base = raiz.getBoundingClientRect();
+    var r = li.getBoundingClientRect();
+    var est = { left:(r.left-base.left)+"px", top:(r.top-base.top)+"px",
+                width:r.width+"px", height:r.height+"px" };
+    Object.assign(filtro.style, est);
+    Object.assign(texto.style, est);
+    texto.textContent = li.textContent.trim();
+  }
+
+  function selecionar(li, indice){
+    if(ativo === indice) return;
+    itens.forEach(function(x){ x.classList.remove("active"); });
+    li.classList.add("active");
+    ativo = indice;
+    posicionar(li);
+    if(semMovimento) return;
+    filtro.querySelectorAll(".particle").forEach(function(x){ filtro.removeChild(x); });
+    texto.classList.remove("active");
+    void texto.offsetWidth;            // reinicia a animacao
+    texto.classList.add("active");
+    soltarBolhas(filtro);
+  }
+
+  itens.forEach(function(li, i){
+    li.addEventListener("click", function(){ selecionar(li, i); });
+  });
+
+  if("ResizeObserver" in window){
+    new ResizeObserver(function(){
+      if(ativo > -1 && itens[ativo]) posicionar(itens[ativo]);
+    }).observe(raiz);
+  }
 })();
 </script>
 </body>
