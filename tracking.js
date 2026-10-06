@@ -1,7 +1,11 @@
 /* Mantém a origem da visita até o checkout da Kiwify, integrado à UTMify. */
 (function () {
   'use strict';
-  var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'sck', 's1', 's2', 's3'];
+  // 'fbclid' vai junto para o checkout de proposito: o cookie _fbc do Meta e
+  // primario do dominio, entao nao atravessa daqui para o pay.kiwify.com.br.
+  // Levando o fbclid na URL, o pixel da Kiwify remonta o _fbc e o Meta
+  // consegue ligar a compra ao clique no anuncio.
+  var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'sck', 's1', 's2', 's3', 'fbclid'];
   var storageKey = 'rota-enem-attribution-v1';
   var incoming = new URLSearchParams(window.location.search);
   var attribution = {};
