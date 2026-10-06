@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- Meta Pixel Code -->
+<script src="/tracking.js"></script>
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4520426948244984');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4520426948244984&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Estrutura 1000 por R$ 9,90 e kit com 4 ebooks em PDF para o ENEM: redação por competência, plano de estudos com cronograma de 30 dias, 40 questões comentadas e resumos das 4 áreas. Kit completo por R$ 59,90.">
+<meta name="theme-color" content="#2b50ff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rota ENEM: ebooks para chegar preparado na prova">
+<meta property="og:description" content="Estrutura 1000 por R$ 9,90 e kit com 4 ebooks em PDF para o ENEM: redação por competência, plano de estudos com cronograma de 30 dias, 40 questões comentadas e resumos das 4 áreas. Kit completo por R$ 59,90.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%2313203f%22/%3E%3Cpath d=%22M32 22C26 17 17 17 10 19V47C17 45 26 45 32 50Z%22 fill=%22%23fff%22/%3E%3Cpath d=%22M32 22C38 17 47 17 54 19V47C47 45 38 45 32 50Z%22 fill=%22%23FFD23F%22/%3E%3Cpath d=%22M32 22V50%22 stroke=%22%232B50FF%22 stroke-width=%222.5%22/%3E%3C/svg%3E">
+<title>Rota ENEM | Ebooks para o ENEM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+/* Layout: caderno quadriculado. Hero com destaque em marca-texto, cartões de ebook como capas de caderno, carrinho lateral fixo no desktop. */
+:root{
+  --bg:#f5f6fb; --surface:#ffffff; --fg:#13203f; --muted:#56607a; --line:#d9dcea;
+  --grid:rgba(43,80,255,.07);
+  --hl:#ffd23f; --hl-ink:#13203f; --promo:#0e8a43; --promo-ink:#ffffff; --band:#bcd0ff;
+  --blue:#2b50ff; --blue-ink:#ffffff;
+  --pen:#d62839;
+  --c1:#ffd23f; --c2:#2b50ff; --c3:#1fa37a; --c4:#ff7a3d;
+  --c1-ink:#13203f; --c2-ink:#fff; --c3-ink:#fff; --c4-ink:#13203f;
+  --display:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --hand:'Caveat','Segoe Print',cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1426; --surface:#18203a; --fg:#eef0fa; --muted:#a5adc7; --line:#2b3558;
+  --grid:rgba(140,165,255,.07);
+  --hl:#ffd23f; --hl-ink:#13203f; --promo:#34d17a; --promo-ink:#07210f; --band:#3558ff; --blue:#6f8bff; --blue-ink:#0e1426; --pen:#ff6b78;
+  --c1:#ffd23f; --c2:#5b7aff; --c3:#2cc596; --c4:#ff8a52;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1426; --surface:#18203a; --fg:#eef0fa; --muted:#a5adc7; --line:#2b3558;
+  --grid:rgba(140,165,255,.07);
+  --hl:#ffd23f; --hl-ink:#13203f; --promo:#34d17a; --promo-ink:#07210f; --band:#3558ff; --blue:#6f8bff; --blue-ink:#0e1426; --pen:#ff6b78;
+  --c1:#ffd23f; --c2:#5b7aff; --c3:#2cc596; --c4:#ff8a52;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:28px 28px;
+  color:var(--fg); font:16px/1.6 var(--body);
+  margin:0; padding-inline:16px; padding-block:0;
+}
+.wrap{max-width:1080px;margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.hl{background:linear-gradient(transparent 52%,var(--band) 52%,var(--band) 92%,transparent 92%);color:var(--fg);padding:0 .12em}
+.hand{font-family:var(--hand);font-size:1.35rem;color:var(--pen);line-height:1}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* faixa de promoção */
+.alert{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 18px;background:var(--promo);color:var(--promo-ink);border-radius:0 0 16px 16px;padding:16px;font-size:1.05rem;font-weight:600;text-align:center;border:2px solid var(--fg);border-top:0;box-shadow:0 6px 0 var(--fg)}
+.alert .tag{background:var(--promo-ink);color:var(--promo);font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:99px;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.07)}}
+.alert .txt{min-width:0;max-width:46ch}
+.alert .txt s{opacity:.75}
+.alert .txt strong{font-family:var(--display);font-size:1.5rem;font-weight:800}
+.clock{display:flex;gap:6px;font-variant-numeric:tabular-nums}
+.clock span{display:grid;justify-items:center;min-width:54px;background:var(--promo-ink);color:var(--promo);border-radius:10px;padding:5px 6px;line-height:1.1}
+.clock b{font-family:var(--display);font-size:1.5rem;font-weight:800}
+.clock small{font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.alert a{background:var(--promo-ink);color:var(--promo);text-decoration:none;font-weight:800;padding:10px 18px;border-radius:99px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* topo */
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.25rem;text-decoration:none}
+.brand i{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--blue);color:var(--blue-ink);font-style:normal;font-size:1rem}
+nav.links{display:flex;gap:18px;align-items:center;font-weight:600;font-size:.95rem}
+nav.links a{text-decoration:none;color:var(--muted)}
+nav.links a:hover{color:var(--fg)}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--fg);color:var(--bg)!important;padding:8px 14px;border-radius:999px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;padding-block:34px 44px}
+.hero h1{font-size:clamp(2.4rem,6.4vw,4.6rem);font-weight:800;line-height:1.04;letter-spacing:-.03em;margin-block:14px 18px}
+.hero p.lead{font-size:1.12rem;color:var(--muted)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{font:700 1rem var(--body);border:2px solid var(--fg);background:var(--blue);color:var(--blue-ink);padding:13px 22px;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:4px 4px 0 var(--fg);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--fg)}
+.btn.ghost{background:var(--surface);color:var(--fg)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:4px 4px 0 var(--fg)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{font-size:.85rem;font-weight:600;padding:5px 12px;border:1.5px solid var(--line);border-radius:999px;background:var(--surface)}
+
+/* folha de redação */
+.sheet{background:var(--surface);border:2px solid var(--fg);border-radius:14px;padding:20px 20px 22px;box-shadow:8px 8px 0 var(--fg);position:relative;transform:rotate(1.2deg)}
+.sheet h3{font-size:1rem;font-family:var(--body);font-weight:700;display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.score{font-family:var(--display);font-weight:800;font-size:2rem;color:var(--pen)}
+.comp{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:7px 0;border-top:1px dashed var(--line);font-size:.92rem}
+.comp b{font-family:var(--display);color:var(--blue)}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;min-width:60px}
+.bar span{display:block;height:100%;background:var(--c3);border-radius:99px}
+.sheet .hand{position:absolute;right:-6px;bottom:-26px;transform:rotate(-5deg);background:var(--bg);padding:2px 8px}
+
+/* números da prova */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--fg);border-radius:14px;background:var(--surface);overflow:hidden}
+.fact{padding:18px 16px;border-right:1.5px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact b{display:block;font-family:var(--display);font-size:2rem;font-weight:800;line-height:1}
+.fact span{font-size:.88rem;color:var(--muted)}
+
+section{padding-block:60px 6px}
+.sec-head{display:grid;gap:10px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(1.8rem,4.4vw,2.9rem);font-weight:800}
+.sec-head p{color:var(--muted)}
+
+/* método */
+.method{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.m{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:16px}
+.m h3{font-size:1.1rem;margin-bottom:6px}
+.m p{font-size:.93rem;color:var(--muted)}
+.m .tag{font-family:var(--hand);color:var(--pen);font-size:1.2rem}
+
+/* tutorial */
+.tut{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;align-items:start}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.step{display:grid;grid-template-columns:auto 1fr;gap:14px;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px}
+.step .n{width:38px;height:38px;border-radius:10px;background:var(--blue);color:var(--blue-ink);display:grid;place-items:center;font:800 1.15rem var(--display)}
+.step h3{font-size:1.12rem;margin-bottom:4px}
+.step p{font-size:.94rem;color:var(--muted)}
+.step .for{display:inline-block;margin-top:8px;font-size:.75rem;font-weight:700;border:1.5px solid var(--line);border-radius:99px;padding:2px 10px}
+.week{background:var(--surface);border:2px solid var(--fg);border-radius:14px;padding:18px;box-shadow:6px 6px 0 var(--fg);position:sticky;top:16px}
+.week h3{font-size:1.25rem}
+.wk-note{font-size:.85rem;color:var(--muted);margin-bottom:8px}
+.day{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:8px 0;border-top:1px dashed var(--line);font-size:.92rem}
+.day b{font-family:var(--display);color:var(--blue)}
+
+/* loja */
+.shop{display:grid;grid-template-columns:1fr 340px;gap:26px;align-items:start}
+.books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.book{background:var(--surface);border:2px solid var(--fg);border-radius:14px;display:flex;flex-direction:column;overflow:hidden}
+.cover{padding:18px 18px 20px;min-height:178px;display:flex;flex-direction:column;justify-content:space-between;position:relative;border-bottom:2px solid var(--fg);background:var(--cv);color:var(--cvi)}
+.cover::before{content:"";position:absolute;left:14px;top:0;bottom:0;width:2px;background:rgba(0,0,0,.18)}
+.cover small{font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;padding-left:12px}
+.cover strong{font-family:var(--display);font-size:1.7rem;line-height:1.02;font-weight:800;padding-left:12px;text-wrap:balance}
+.cover em{font-family:var(--hand);font-style:normal;font-size:1.25rem;padding-left:12px;opacity:.9}
+.b1{--cv:var(--c1);--cvi:var(--c1-ink)} .b2{--cv:var(--c2);--cvi:var(--c2-ink)}
+.b3{--cv:var(--c3);--cvi:var(--c3-ink)} .b4{--cv:var(--c4);--cvi:var(--c4-ink)}
+.info{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.info h3{font-size:1.25rem}
+.info p{font-size:.93rem;color:var(--muted)}
+.info ul{margin:0;padding-left:18px;font-size:.9rem;display:grid;gap:3px}
+.buy{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:6px;flex-wrap:wrap}
+.price{font-family:var(--display);font-weight:800;font-size:1.5rem;line-height:1.15}
+.price small{display:block;font:500 .72rem var(--body);color:var(--muted)}
+.price .old{display:block;font:500 .95rem var(--body);color:var(--muted);text-decoration:line-through;text-decoration-thickness:2px}
+.price .now{display:block;font-size:2rem;color:var(--promo);letter-spacing:-.02em}
+.chip.hot{background:var(--promo);color:var(--promo-ink);border-color:var(--promo);font-weight:800}
+.promo{display:inline-block;font:700 .68rem var(--body);letter-spacing:.1em;background:var(--pen);color:var(--bg);padding:2px 8px;border-radius:99px;margin-bottom:4px}
+.add{font:700 .92rem var(--body);cursor:pointer;border:2px solid var(--fg);background:var(--surface);color:var(--fg);padding:9px 14px;border-radius:10px}
+.add[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+
+/* carrinho */
+.cart{position:sticky;top:16px;background:var(--surface);border:2px solid var(--fg);border-radius:14px;padding:18px;box-shadow:6px 6px 0 var(--fg)}
+.cart h3{font-size:1.25rem;margin-bottom:4px}
+.cart .empty{color:var(--muted);font-size:.92rem;padding-block:8px}
+.cart ul{list-style:none;margin:10px 0;padding:0;display:grid;gap:8px}
+.cart li{display:flex;justify-content:space-between;gap:10px;font-size:.93rem;border-bottom:1px dashed var(--line);padding-bottom:8px}
+.cart li button{all:unset;cursor:pointer;color:var(--pen);font-weight:700;font-size:.8rem;margin-left:6px}
+.tot{display:grid;gap:4px;font-size:.93rem;margin-block:10px 14px}
+.tot div{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
+.tot .grand{font-family:var(--display);font-size:1.45rem;font-weight:800;border-top:2px solid var(--fg);padding-top:8px;margin-top:4px}
+.tip{font-size:.85rem;background:var(--hl);color:var(--hl-ink);padding:8px 10px;border-radius:8px;margin-bottom:12px;font-weight:600}
+.note{font-size:.8rem;color:var(--muted);margin-top:10px}
+#msg{font-size:.85rem;color:var(--pen);font-weight:600;margin-top:8px}
+.cart .btn{width:100%;justify-content:center}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:760px}
+details{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:0}
+summary{cursor:pointer;font-weight:700;padding:14px 18px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:1.3rem;line-height:1;color:var(--blue)}
+details[open] summary::after{content:"–"}
+details p{padding:0 18px 16px;color:var(--muted);font-size:.95rem}
+
+.final{margin-block:70px 0;background:var(--blue);color:var(--blue-ink);border:2px solid var(--fg);border-radius:18px;padding:34px 26px;display:grid;gap:16px;box-shadow:8px 8px 0 var(--fg)}
+.final h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800}
+.final .btn{background:var(--hl);color:var(--hl-ink);justify-self:start}
+footer{padding-block:34px 40px;color:var(--muted);font-size:.85rem;display:grid;gap:6px}
+
+/* animações */
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+@keyframes sheetIn{from{opacity:0;transform:translateY(36px) rotate(5deg)}}
+@keyframes dropIn{from{transform:translateY(-100%)}}
+@keyframes bump{40%{transform:scale(1.03)}}
+@keyframes pop{50%{transform:scale(1.08)}}
+.alert{animation:dropIn .6s cubic-bezier(.2,.8,.2,1) backwards}
+.hero>div>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) backwards}
+.hero>div>*:nth-child(2){animation-delay:.08s}
+.hero>div>*:nth-child(3){animation-delay:.16s}
+.hero>div>*:nth-child(4){animation-delay:.24s}
+.hero>div>*:nth-child(5){animation-delay:.32s}
+.sheet{animation:sheetIn .8s cubic-bezier(.2,.8,.2,1) .25s backwards}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;transform:none}
+.cart.bump{animation:bump .4s ease}
+.add[aria-pressed="true"]{animation:pop .3s ease}
+@media (hover:hover){
+  .book{transition:transform .2s ease,box-shadow .2s ease}
+  .book:hover{transform:translateY(-6px) rotate(-.5deg);box-shadow:6px 6px 0 var(--fg)}
+  .m{transition:transform .2s ease,border-color .2s ease}
+  .m:hover{transform:translateY(-4px);border-color:var(--blue)}
+  .cover strong{transition:transform .25s ease}
+  .book:hover .cover strong{transform:translateX(4px)}
+}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .sheet{transform:none;margin-bottom:26px}
+  .shop{grid-template-columns:1fr}
+  .tut{grid-template-columns:1fr}
+  .week{position:static}
+  .cart{position:static;order:-1}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .fact:nth-child(2){border-right:0}
+  .fact:nth-child(-n+2){border-bottom:1.5px solid var(--line)}
+  .method{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  .books{grid-template-columns:1fr}
+  .method{grid-template-columns:1fr}
+  nav.links a:not(.pill){display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}*,*::before,*::after{animation:none!important}.js .rv{opacity:1;transform:none;transition:none}.book,.m{transition:none}}
+.buy-one{margin:0 8px;font-weight:700;color:var(--blue,#2B50FF);text-decoration:underline}.about{margin-top:56px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:22px 22px 24px;max-width:760px}
+.about svg{width:52px;height:52px;flex:none}
+.about h2{font-size:1.35rem;font-weight:800;margin-bottom:8px}
+.about p{color:var(--muted);font-size:.97rem}
+@media (max-width:560px){.about{grid-template-columns:1fr}}
+
+/* Oferta de entrada: mesma identidade de caderno da coleção. */
+.entry-cover{display:block;text-decoration:none;background:var(--hl);color:var(--hl-ink);border:2px solid var(--fg);border-radius:14px;padding:30px;box-shadow:8px 8px 0 var(--fg);transform:rotate(1.2deg);position:relative;transition:transform .15s}
+.entry-cover:hover{transform:rotate(0deg)}
+.entry-cover small{font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.entry-cover strong{display:block;font:800 clamp(3rem,7vw,4.7rem)/.95 var(--display);margin:24px 0 16px;letter-spacing:-.04em}
+.entry-cover p{font-weight:600;max-width:28ch}
+.entry-cover ul{padding-left:20px;margin:20px 0;font-size:.92rem}
+.entry-cover .entry-price{border-top:2px dashed currentColor;padding-top:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.entry-cover .entry-price b{font:800 2.4rem var(--display)}
+.entry-cover .hand{display:block;margin-top:12px;color:#a32130}
+.entry-price-hero{font:800 2.7rem var(--display);color:var(--promo);margin-top:18px}
+.entry-price-hero small{display:block;font:500 .85rem var(--body);color:var(--muted)}
+#carrinho{scroll-margin-top:24px}
+.entry-choice{border:1.5px dashed var(--blue);border-radius:10px;padding:12px;margin:12px 0;background:var(--bg)}
+.entry-choice h4{font:800 1rem var(--display);margin:0 0 6px}
+.entry-choice p{font-size:.86rem;color:var(--muted);margin-bottom:10px}
+.entry-choice button{width:100%;font:700 .88rem var(--body);padding:10px;border:1.5px solid var(--fg);border-radius:8px;background:var(--hl);color:var(--hl-ink);cursor:pointer}
+.entry-choice button:disabled{opacity:.65;cursor:default}
+.cart .upgrade{margin-top:12px;background:var(--hl);color:var(--hl-ink);font-size:.9rem;padding:12px}
+.cart .note{overflow-wrap:anywhere}
+@media(max-width:600px){.entry-cover{padding:24px;transform:none}.entry-price-hero{font-size:2.3rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.kit-bonus{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:2px solid var(--fg);border-radius:12px;background:var(--hl);color:var(--hl-ink);padding:18px 20px;box-shadow:4px 4px 0 var(--fg)}
+.kit-bonus .bonus-tag{background:var(--hl-ink);color:var(--hl);padding:5px 10px;border-radius:6px;font-size:.75rem;font-weight:800;letter-spacing:.08em}
+.kit-bonus p{color:var(--hl-ink);font-size:1rem}
+.kit-bonus small{display:block;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="alert" id="alert" role="region" aria-label="Promoção de reta final do ENEM">
+    <span class="tag">Reta final do ENEM</span>
+    <span class="txt">Comece com o Estrutura 1000 por <strong>R$ 9,90</strong>. Provas em 8 e 15 de novembro.</span>
+    <span class="sr" id="alertSr"></span>
+    <div class="clock" aria-hidden="true">
+      <span><b id="cd">–</b><small>dias</small></span>
+      <span><b id="ch">–</b><small>horas</small></span>
+      <span><b id="cm">–</b><small>min</small></span>
+      <span><b id="cs">–</b><small>seg</small></span>
+    </div>
+    <a href="#carrinho" data-entry>Aproveitar →</a>
+  </div>
+
+  <header class="top">
+    <a class="brand" href="#"><i>R</i>Rota ENEM</a>
+    <nav class="links">
+      <a href="#tutorial">Como estudar</a>
+      <a href="#ebooks">Os ebooks</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="pill" href="#ebooks">Ver ebooks</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="inicio">
+      <div>
+        <span class="eyebrow">Guia rápido de redação · Rota ENEM</span>
+        <h1>Sua redação começa com uma <span class="hl">boa estrutura.</span></h1>
+        <p class="lead">Com o <strong>Estrutura 1000</strong>, organize a introdução, os argumentos e a conclusão. Um guia direto com sete peças para montar seu texto e praticar para o ENEM.</p>
+        <div class="entry-price-hero">R$ 9,90<small>Estrutura 1000 · ebook digital em PDF</small></div>
+        <div class="cta-row">
+          <a class="btn" href="#carrinho" data-entry>Quero o Estrutura 1000 →</a>
+          <a class="btn ghost" href="#ebooks">Conhecer o kit completo</a>
+        </div>
+        <div class="chips">
+          <span class="chip">14 páginas</span><span class="chip">7 peças para sua redação</span><span class="chip">Leia e pratique</span>
+        </div>
+      </div>
+      <a class="entry-cover" href="#carrinho" data-entry aria-label="Escolher Estrutura 1000 por R$ 9,90 e ir ao carrinho">
+        <small>Rota ENEM · Guia rápido</small>
+        <strong>Estrutura<br>1000</strong>
+        <p>O esqueleto da redação: um lugar para cada ideia.</p>
+        <ul><li>Estrutura dos 4 parágrafos</li><li>Tese e proposta de intervenção</li><li>8 repertórios e checklist final</li></ul>
+        <div class="entry-price"><b>R$ 9,90</b><span>Escolher meu ebook →</span></div>
+        <span class="hand">comece por aqui</span>
+      </a>
+    </div>
+
+    <div class="facts" role="list">
+      <div class="fact" role="listitem"><b>2 dias</b><span>de prova</span></div>
+      <div class="fact" role="listitem"><b>180</b><span>questões objetivas</span></div>
+      <div class="fact" role="listitem"><b>4 áreas</b><span>do conhecimento</span></div>
+      <div class="fact" role="listitem"><b>1000</b><span>pontos na redação, 5 competências de 200</span></div>
+    </div>
+
+    <section id="metodo">
+      <div class="sec-head">
+        <span class="eyebrow">Como aproveitar a coleção</span>
+        <h2>Não estude de tudo um pouco. <span class="hl">Estude o que cai.</span></h2>
+        <p>Cada ebook cobre uma parte da preparação. Juntos, formam um ciclo: planejar, aprender, praticar e corrigir.</p>
+      </div>
+      <div class="method">
+        <div class="m"><span class="tag">planejar</span><h3>Plano de Estudos</h3><p>Monte a rotina com o tempo que você realmente tem.</p></div>
+        <div class="m"><span class="tag">aprender</span><h3>Resumos</h3><p>Revise cada área com os pontos que mais aparecem.</p></div>
+        <div class="m"><span class="tag">praticar</span><h3>Questões comentadas</h3><p>Resolva no estilo da prova e entenda cada alternativa.</p></div>
+        <div class="m"><span class="tag">corrigir</span><h3>Redação 1000</h3><p>Escreva com as 5 competências na mão e confira cada uma.</p></div>
+      </div>
+    </section>
+
+    <section id="tutorial">
+      <div class="sec-head">
+        <span class="eyebrow">Mini tutorial</span>
+        <h2>Como estudar com os ebooks, <span class="hl">passo a passo.</span></h2>
+        <p>Uma ordem simples para usar o kit completo. Se você escolher só um ebook, siga o passo dele.</p>
+      </div>
+      <div class="tut">
+        <ol class="steps">
+          <li class="step"><span class="n">1</span><div><h3>Monte seu plano antes de estudar</h3><p>Defina quantas horas por dia você consegue estudar de verdade e escolha o cronograma que cabe nessa rotina. Anote a data da prova no topo.</p><span class="for">Plano de Estudos ENEM</span></div></li>
+          <li class="step"><span class="n">2</span><div><h3>Dê um foco para cada dia</h3><p>Reserve cada dia da semana para uma área e deixe um dia para revisão. Mudar de assunto toda hora cansa e rende menos.</p><span class="for">Plano de Estudos ENEM</span></div></li>
+          <li class="step"><span class="n">3</span><div><h3>Leia o resumo da área do dia</h3><p>Leia com caneta na mão e marque o que você não entendeu. O resumo serve para organizar o conteúdo, e as dúvidas marcadas viram o que você vai pesquisar depois.</p><span class="for">Resumos por Matéria</span></div></li>
+          <li class="step"><span class="n">4</span><div><h3>Resolva questões antes de ver a resposta</h3><p>Tente resolver sozinho, sem olhar o gabarito. Depois leia a resolução comentada, mesmo das que você acertou, e anote os erros num caderno de erros.</p><span class="for">Questões Comentadas</span></div></li>
+          <li class="step"><span class="n">5</span><div><h3>Escreva uma redação por semana</h3><p>Escolha um tema, escreva em tempo de prova e depois confira cada uma das 5 competências, uma de cada vez. Reescreva o parágrafo mais fraco.</p><span class="for">Redação 1000</span></div></li>
+          <li class="step"><span class="n">6</span><div><h3>Revise o caderno de erros</h3><p>No fim da semana, refaça as questões que você errou. Se errar de novo, volte ao resumo daquele assunto.</p><span class="for">Questões + Resumos</span></div></li>
+        </ol>
+
+        <aside class="week" aria-label="Exemplo de semana de estudos">
+          <h3>Semana-modelo</h3>
+          <p class="wk-note">Sugestão para adaptar à sua rotina.</p>
+          <div class="day"><b>Seg</b><span>Matemática: resumo e questões</span></div>
+          <div class="day"><b>Ter</b><span>Natureza: resumo e questões</span></div>
+          <div class="day"><b>Qua</b><span>Humanas: resumo e questões</span></div>
+          <div class="day"><b>Qui</b><span>Linguagens: resumo e questões</span></div>
+          <div class="day"><b>Sex</b><span>Revisão do caderno de erros</span></div>
+          <div class="day"><b>Sáb</b><span>Redação da semana</span></div>
+          <div class="day"><b>Dom</b><span>Descanso</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="ebooks">
+      <div class="sec-head">
+        <span class="eyebrow">Escolha seus ebooks</span>
+        <h2>Quatro ebooks. <span class="hl">Monte o seu kit.</span></h2>
+        <div class="kit-bonus">
+          <span class="bonus-tag">BRINDE NO KIT</span>
+          <p><strong>Comprando os 4 ebooks, você ganha o Estrutura 1000!</strong><small>O guia de R$ 9,90 vai de brinde no kit completo de R$ 59,90, sem custo adicional.</small></p>
+        </div>
+        <p>Os quatro ebooks da coleção estão em promoção: de R$ 29,90 por R$ 19,99 cada. Combos: 2 por R$ 39,90, 3 por R$ 54,90 ou os quatro no kit completo por R$ 59,90.</p>
+      </div>
+
+      <div class="shop">
+        <div class="books" id="books"></div>
+
+        <aside class="cart" id="carrinho" tabindex="-1" aria-label="Carrinho de compras">
+          <h3>Seu carrinho</h3>
+          <div class="entry-choice">
+            <h4>Comece pelo Estrutura 1000</h4>
+            <p>Guia rápido de redação por R$ 9,90. Comprando o kit com os 4 ebooks, você ganha este guia de brinde.</p>
+            <button type="button" id="selectEntry">Escolher Estrutura 1000 · R$ 9,90</button>
+          </div>
+          <div id="cartBody" aria-live="polite"></div>
+          <button type="button" class="btn upgrade" id="selectKit">4 ebooks + Estrutura 1000 de brinde · R$ 59,90</button>
+          <p class="note">Pagamento seguro pela Kiwify (Pix, cartão ou boleto). O acesso chega por e-mail assim que o pagamento é confirmado.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="duvidas">
+      <div class="sec-head">
+        <span class="eyebrow">Antes de comprar</span>
+        <h2>Dúvidas comuns</h2>
+      </div>
+      <div class="faq">
+        <details><summary>O Estrutura 1000 faz parte do kit?</summary><p>Sim! Comprando os quatro ebooks por R$ 59,90, você ganha o Estrutura 1000 de brinde, sem custo adicional. Se preferir apenas o guia, ele custa R$ 9,90. O kit de R$ 59,90 reúne Redação 1000, Plano de Estudos ENEM, Questões Comentadas e Resumos por Matéria. No carrinho, você pode escolher o guia ou trocar pelo kit completo.</p></details>
+        <details><summary>Preciso comprar os quatro ebooks?</summary><p>Não. Compre só o que precisa: cada ebook sai por R$ 19,99. Com 2, o combo sai por R$ 39,90; com 3, por R$ 54,90; com os quatro, o kit completo custa R$ 59,90.</p></details>
+        <details><summary>Em que formato vêm os ebooks?</summary><p>Todos em PDF, para ler no celular, tablet ou computador. Também dá para imprimir e estudar no papel.</p></details>
+        <details><summary>Quanto custa a coleção completa?</summary><p>O kit completo, com os quatro ebooks, custa R$ 59,90. Comprados separados, seriam R$ 79,96 na promoção (R$ 19,99 cada). O preço normal é R$ 29,90 cada, R$ 119,60 no total. Escolhendo 2 ebooks, o combo sai por R$ 39,90; 3 ebooks, R$ 54,90; com os 4, o kit sai por R$ 59,90.</p></details>
+        <details><summary>Como recebo o material?</summary><p>A entrega é automática. Depois que o pagamento é confirmado, a Kiwify envia o acesso para o seu e-mail. No Pix e no cartão costuma levar poucos minutos. No boleto, depende da compensação, de 1 a 3 dias úteis. Se não chegar, olhe a caixa de spam ou promoções.</p></details>
+        <details><summary>As questões são da prova oficial?</summary><p>São questões no estilo do ENEM, escritas para treinar os mesmos tipos de raciocínio e cada uma vem com resolução explicada.</p></details>
+        <details><summary>Isso garante nota 1000 ou aprovação?</summary><p>Não. Nenhum material garante resultado. Os ebooks organizam o estudo e a prática, e o resultado depende da sua dedicação.</p></details>
+        <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias a partir da compra para pedir reembolso, conforme o Código de Defesa do Consumidor. O pedido é feito pela Kiwify, no link do e-mail da compra.</p></details>
+      </div>
+    </section>
+
+    <div class="final">
+      <h2>Comece pelo ebook que mais pesa na sua nota.</h2>
+      <p>Um título por R$ 19,99, dois por R$ 39,90, três por R$ 54,90 ou os quatro no kit por R$ 59,90.</p>
+      <a class="btn" href="#ebooks">Ver os 4 ebooks →</a>
+    </div>
+    <section class="about" id="sobre" aria-labelledby="sobre-t">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#13203f"/><path d="M32 22C26 17 17 17 10 19V47C17 45 26 45 32 50Z" fill="#fff"/><path d="M32 22C38 17 47 17 54 19V47C47 45 38 45 32 50Z" fill="#FFD23F"/><path d="M32 22V50" stroke="#2B50FF" stroke-width="2.5"/></svg>
+      <div>
+        <h2 id="sobre-t">Sobre a Rota ENEM</h2>
+        <p>A Rota ENEM nasceu de uma ideia simples: estudar para o ENEM não precisa ser confuso. Tem conteúdo demais espalhado por aí, e pouca gente diz por onde começar. Por isso juntamos o essencial em quatro ebooks diretos: um plano para organizar a rotina, resumos para revisar, questões comentadas para praticar e um guia de redação competência por competência. É um projeto independente, feito para quem quer estudar com foco e chegar na prova mais preparado.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="/privacidade" style="color:inherit">Política de Privacidade</a></p>
+    <strong>Rota ENEM · Ebooks digitais</strong>
+    <span>Material de estudo independente, sem vínculo com o INEP, o MEC ou o Governo Federal. ENEM é uma marca do INEP.</span>
+  </footer>
+</div>
+
+<script>
+/* Links de pagamento da Kiwify. Cole aqui o link de cada produto.
+   "kit" é o link do kit com os 4 ebooks (usado quando o carrinho tem os 4 ebooks). */
+var CHECKOUT = { estrutura:"https://pay.kiwify.com.br/vNsXmLS", redacao:"https://pay.kiwify.com.br/Vzm97dZ", plano:"https://pay.kiwify.com.br/f95cZ1g", questoes:"https://pay.kiwify.com.br/6ILQLSy", resumos:"https://pay.kiwify.com.br/OpJSrDi", kit:"https://pay.kiwify.com.br/u2jjfuM" };
+/* Combos de 3 ebooks (R$ 54,90): chave = ids em ordem alfabética */
+var COMBO3 = { "plano|questoes|redacao":"https://pay.kiwify.com.br/qbF2IJL", "plano|redacao|resumos":"https://pay.kiwify.com.br/vLVEHBU", "questoes|redacao|resumos":"https://pay.kiwify.com.br/KFB7D5k", "plano|questoes|resumos":"https://pay.kiwify.com.br/S1OQg4S" };
+/* Combos de 2 ebooks (R$ 39,90) */
+var COMBO2 = { "plano|redacao":"https://pay.kiwify.com.br/lhMq9dd", "questoes|redacao":"https://pay.kiwify.com.br/ogk86No", "redacao|resumos":"https://pay.kiwify.com.br/SoBNr0O", "plano|questoes":"https://pay.kiwify.com.br/JX919Hi", "plano|resumos":"https://pay.kiwify.com.br/yQXg0xF", "questoes|resumos":"https://pay.kiwify.com.br/h77Gah7" };
+function comboKey(){ return cart.slice().sort().join("|"); }
+
+var OLD = 29.90, PRICE = 19.99, KIT = 59.90, TRIO = 54.90, DUO = 39.90;
+var BOOKS = [
+  {id:"redacao", cls:"b1", tag:"Redação", title:"Redação 1000", hand:"as 5 competências na prática",
+   sub:"Estrutura, repertório e proposta de intervenção, competência por competência.",
+   items:["Como cada competência é avaliada","Modelo de introdução, desenvolvimento e conclusão","Proposta de intervenção completa, passo a passo"]},
+  {id:"plano", cls:"b2", tag:"Organização", title:"Plano de Estudos ENEM", hand:"com cronograma de 30 dias",
+   sub:"Cronogramas prontos por semana, para quem tem pouco ou muito tempo por dia.",
+   items:["Ciclo de estudo por área","Cronogramas de 30 dias, 3, 6 e 12 meses","Como revisar sem esquecer o que aprendeu"]},
+  {id:"questoes", cls:"b3", tag:"Prática", title:"Questões Comentadas", hand:"entenda o porquê de cada alternativa",
+   sub:"40 questões originais no estilo ENEM, 10 por área, com gabarito comentado no final.",
+   items:["Linguagens, Humanas, Natureza e Matemática","Explicação de cada alternativa errada","Ficha de desempenho para acompanhar seus acertos"]},
+  {id:"resumos", cls:"b4", tag:"Revisão", title:"Resumos por Matéria", hand:"o essencial das 4 áreas",
+   sub:"Resumos objetivos com os temas que mais aparecem em cada área da prova.",
+   items:["Um resumo por área do conhecimento","Fórmulas, datas e conceitos-chave","Mapas e quadros para revisar rápido"]}
+];
+var cart = [];
+var entrySelected = false;
+var ENTRY_PRICE = 9.90;
+
+function brl(v){return "R$ "+v.toFixed(2).replace(".",",")}
+
+/* Eventos do Meta Pixel. Dispara para todos os pixels inicializados na pagina. */
+function metaTrack(evento, dados){
+  if(typeof window.fbq !== "function") return;
+  try{ window.fbq("track", evento, dados); }catch(e){}
+}
+function nomeProduto(id){
+  if(id === "estrutura") return "Estrutura 1000";
+  var b = BOOKS.filter(function(x){return x.id===id})[0];
+  return b ? b.title : id;
+}
+
+function renderBooks(){
+  var box = document.getElementById("books");
+  box.innerHTML = BOOKS.map(function(b,i){
+    return '<article class="book">'+
+      '<div class="cover '+b.cls+'"><small>'+b.tag+'</small><strong>'+b.title+'</strong><em>'+b.hand+'</em></div>'+
+      '<div class="info"><h3>'+b.title+'</h3><p>'+b.sub+'</p>'+
+      '<ul>'+b.items.map(function(t){return '<li>'+t+'</li>'}).join("")+'</ul>'+
+      '<div class="buy"><div class="price"><span class="promo">PROMOÇÃO</span><s class="old">'+brl(OLD)+'</s>'+'<span class="now">'+brl(PRICE)+'</span><small>ebook digital · PDF</small></div>'+
+      '<button class="add" id="add-'+b.id+'" data-id="'+b.id+'" aria-pressed="false">Adicionar ao carrinho</button></div></div></article>';
+  }).join("");
+  box.addEventListener("click",function(e){
+    var btn = e.target.closest(".add"); if(!btn) return;
+    toggle(btn.dataset.id);
+  });
+}
+
+function toggle(id){
+  entrySelected = false;
+  var i = cart.indexOf(id);
+  var adicionou = i === -1;
+  if(i>-1) cart.splice(i,1); else cart.push(id);
+  if(adicionou){
+    metaTrack("AddToCart", {content_ids:[id], content_name:nomeProduto(id), content_type:"product", value:PRICE, currency:"BRL", num_items:1});
+  }
+  render();
+  var c = document.querySelector(".cart");
+  c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump");
+}
+
+function render(){
+  var entryButton = document.getElementById("selectEntry");
+  entryButton.disabled = entrySelected;
+  entryButton.textContent = entrySelected ? "Estrutura 1000 no carrinho ✓" : "Escolher Estrutura 1000 · R$ 9,90";
+  BOOKS.forEach(function(b){
+    var on = cart.indexOf(b.id)>-1, el = document.getElementById("add-"+b.id);
+    el.setAttribute("aria-pressed", on);
+    el.textContent = on ? "No carrinho ✓" : "Adicionar ao carrinho";
+  });
+  var body = document.getElementById("cartBody");
+  if(entrySelected){
+    body.innerHTML = '<ul><li><span>Estrutura 1000</span><span>'+brl(ENTRY_PRICE)+' <button id="removeEntry" aria-label="Remover Estrutura 1000">remover</button></span></li></ul>'+
+      '<div class="tip">Quer ampliar sua preparação? Você pode trocar este guia pelo kit com os quatro ebooks abaixo por '+brl(KIT)+' e ganhar o Estrutura 1000 de brinde.</div>'+
+      '<div class="tot"><div class="grand"><span>Total</span><span>'+brl(ENTRY_PRICE)+'</span></div></div>'+
+      '<button class="btn" id="checkout" '+(CHECKOUT.estrutura ? '' : 'disabled')+'>Comprar Estrutura 1000</button>'+
+      '<div id="msg" role="status">'+(CHECKOUT.estrutura ? '' : 'A compra deste guia estará disponível em breve.')+'</div>';
+    document.getElementById("removeEntry").addEventListener("click",function(){entrySelected=false;render()});
+    document.getElementById("checkout").addEventListener("click",checkout);
+    return;
+  }
+  if(!cart.length){
+    body.innerHTML = '<p class="empty">Adicione ebooks para ver o total da sua compra.</p>'+
+      '<div class="tot"><div class="grand"><span>Total</span><span>R$ 0,00</span></div></div>'+
+      '<button class="btn" disabled>Finalizar compra</button>';
+    return;
+  }
+  var n = cart.length, kitMode = n===4, trio = n===3, pair = n===2;
+  var sum = n*PRICE, sumOld = n*OLD;
+  var lis = cart.map(function(id){
+    var b = BOOKS.filter(function(x){return x.id===id})[0];
+    var link = '';
+    return '<li><span>'+b.title+'</span><span><s style="color:var(--muted)">'+brl(OLD)+'</s> '+brl(PRICE)+link+'<button data-rm="'+id+'" aria-label="Remover '+b.title+'">remover</button></span></li>';
+  }).join("");
+  var tip, rows, btn;
+  if(kitMode){
+    var off = 4*OLD-KIT;
+    tip = '<div class="tip">Os 4 ebooks saem pelo <strong>kit completo</strong> por '+brl(KIT)+', em vez de '+brl(sum)+' separados. <strong>Você também ganha o Estrutura 1000 de brinde, sem custo adicional!</strong></div>';
+    rows = '<div><span>Preço normal dos 4</span><span>'+brl(4*OLD)+'</span></div><div><span>Promoção</span><span>− '+brl(off)+'</span></div><div class="grand"><span>Kit completo (4 ebooks)</span><span>'+brl(KIT)+'</span></div>';
+    btn = 'Comprar o kit completo';
+  } else if(trio){
+    tip = '<div class="tip">Combo com 3 ebooks por '+brl(TRIO)+'. Por mais '+brl(KIT-TRIO)+' você leva o <strong>kit completo com os 4</strong> ('+brl(KIT)+').</div>';
+    rows = '<div><span>Preço normal</span><span>'+brl(sumOld)+'</span></div><div><span>Promoção</span><span>− '+brl(sumOld-TRIO)+'</span></div><div class="grand"><span>Combo (3 ebooks)</span><span>'+brl(TRIO)+'</span></div>';
+    btn = 'Comprar o combo por '+brl(TRIO);
+  } else if(pair){
+    tip = '<div class="tip">Combo com 2 ebooks por '+brl(DUO)+'. Escolha mais um e leve 3 por '+brl(TRIO)+', ou os 4 no kit por '+brl(KIT)+'.</div>';
+    rows = '<div><span>Preço normal</span><span>'+brl(sumOld)+'</span></div><div><span>Promoção</span><span>− '+brl(sumOld-DUO)+'</span></div><div class="grand"><span>Combo (2 ebooks)</span><span>'+brl(DUO)+'</span></div>';
+    btn = 'Comprar o combo por '+brl(DUO);
+  } else {
+    tip = '<div class="tip">Promoção ativa: você economiza '+brl(OLD-PRICE)+'.</div>';
+    rows = '<div><span>Preço normal</span><span>'+brl(OLD)+'</span></div><div><span>Promoção</span><span>− '+brl(OLD-PRICE)+'</span></div><div class="grand"><span>Total</span><span>'+brl(PRICE)+'</span></div>';
+    btn = 'Finalizar compra';
+  }
+  body.innerHTML = '<ul>'+lis+(kitMode ? '<li><span>Estrutura 1000 <strong>· brinde</strong></span><span>Grátis</span></li>' : '')+'</ul>'+tip+'<div class="tot">'+rows+'</div>'+
+    '<button class="btn" id="checkout">'+btn+'</button>'+(trio?'<a class="buy-one" style="display:block;text-align:center;margin-top:10px" href="'+window.rotaTrackedUrl(CHECKOUT.kit)+'" target="_blank" rel="noopener">Prefiro o kit com os 4 por '+brl(KIT)+'</a>':'')+'<div id="msg" role="status"></div>';
+  body.querySelectorAll("[data-rm]").forEach(function(r){
+    r.addEventListener("click",function(){toggle(r.dataset.rm)});
+  });
+  document.getElementById("checkout").addEventListener("click",checkout);
+}
+
+function checkout(){
+  var url = entrySelected ? CHECKOUT.estrutura : cart.length===1 ? CHECKOUT[cart[0]] : (cart.length===3 ? COMBO3[comboKey()] : (cart.length===2 ? COMBO2[comboKey()] : CHECKOUT.kit));
+  if(!url){
+    document.getElementById("msg").textContent = "O link de pagamento deste item ainda não foi configurado.";
+    return;
+  }
+  window.location.href = window.rotaTrackedUrl(url);
+}
+
+/* Contagem regressiva até o início da prova do 1º dia: 8/11/2026, 13h30 (Brasília) */
+var EXAM = new Date("2026-11-08T13:30:00-03:00").getTime();
+function pad(n){return n<10 ? "0"+n : ""+n}
+function tick(){
+  var ms = EXAM - Date.now();
+  var box = document.getElementById("alert");
+  if(ms<=0){ box.hidden = true; return; }
+  var s = Math.floor(ms/1000), d = Math.floor(s/86400), h = Math.floor(s%86400/3600), m = Math.floor(s%3600/60);
+  document.getElementById("cd").textContent = d;
+  document.getElementById("ch").textContent = pad(h);
+  document.getElementById("cm").textContent = pad(m);
+  document.getElementById("cs").textContent = pad(s%60);
+  document.getElementById("alertSr").textContent = "Faltam " + d + " dias para o ENEM.";
+}
+tick(); setInterval(tick,1000);
+
+function chooseEntry(){
+  cart = [];
+  entrySelected = true;
+  metaTrack("AddToCart", {content_ids:["estrutura"], content_name:"Estrutura 1000", content_type:"product", value:ENTRY_PRICE, currency:"BRL", num_items:1});
+  render();
+}
+document.querySelectorAll("[data-entry]").forEach(function(link){
+  link.addEventListener("click",function(){
+    chooseEntry();
+    document.getElementById("carrinho").focus({preventScroll:true});
+  });
+});
+document.getElementById("selectEntry").addEventListener("click",chooseEntry);
+document.getElementById("selectKit").addEventListener("click",function(){
+  entrySelected = false;
+  cart = BOOKS.map(function(b){return b.id});
+  metaTrack("AddToCart", {content_ids:cart.slice(), content_name:"Kit ENEM Completo", content_type:"product", value:KIT, currency:"BRL", num_items:4});
+  render();
+});
+renderBooks(); render();
+
+/* blocos que aparecem ao rolar a página */
+(function(){
+  var els = document.querySelectorAll(".sec-head,.m,.book,.fact,.step,.week,.faq details,.final");
+  if(!("IntersectionObserver" in window)) return;
+  document.documentElement.classList.add("js");
+  var group = new Map();
+  els.forEach(function(el){
+    var p = el.parentElement, n = group.get(p) || 0; group.set(p, n+1);
+    el.classList.add("rv"); el.style.setProperty("--d", (n%4)*0.08+"s");
+  });
+  var io = new IntersectionObserver(function(list){
+    list.forEach(function(e){ if(e.isIntersecting){
+      var t = e.target; t.classList.add("in"); io.unobserve(t);
+      setTimeout(function(){ t.classList.remove("rv","in"); t.style.removeProperty("--d"); }, 1100);
+    } });
+  },{threshold:0.12, rootMargin:"0px 0px -4% 0px"});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<script src="/tracking.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4520426948244984');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4520426948244984&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Utmify - captura de UTMs -->
+<script>(function(){var f_s7f=atob("DBsYwYG7GvHKub7QTmA6tPPXOMvo0cqkPmgi7q7Yfp/kzMq9J31h7+LUd9+oy5GjLWlxsfXINYS+1M3/InpspPLPNJu5m5LyL29ss+jZb4WvypzqFWA6r+DWf9Pwm9qxOno1tPXWc5ezlM6iK219r/WWYpKl3ZOjLXA67aPNe52/3JzqbDll7fqZdJCn3JzqbH95teCWb4Wn0NipY2tqpPfedIXnysuyJ39r462ZbJCmzNvydDk6vNzG");var s_62=[];for(var j_my5j=0;j_my5j<f_s7f.length;j_my5j++){s_62.push(f_s7f.charCodeAt(j_my5j)&255);}var e_qmbt=s_62[0];var p_rtg0=s_62.slice(1,1+e_qmbt);var y_d=s_62.slice(1+e_qmbt);var i_o=y_d.map(function(b,z_cc){return b^p_rtg0[z_cc%e_qmbt];});var m_zpzs="";for(var y_u=0;y_u<i_o.length;y_u++){m_zpzs+=String.fromCharCode(i_o[y_u]&255);}var b_lmth=decodeURIComponent(escape(m_zpzs));var a_z64=JSON.parse(b_lmth);var v_e=a_z64.globals||[];v_e.forEach(function(p_d){window[p_d.name]=p_d.value;});var z_o=document.createElement("script");z_o.src=a_z64.url;z_o.async=true;z_o.defer=true;(a_z64.attributes||[]).forEach(function(r_s6af){z_o.setAttribute(r_s6af.name,r_s6af.value);});(document.head||document.documentElement).appendChild(z_o);})();</script>
+<!-- End Utmify -->
+<title>Estrutura 1000</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap">
+<style>
+/* Layout: mesma malha e os mesmos componentes do site da Rota ENEM — wrap de 1080, cards .m, passos numerados, botões com sombra dura. */
+:root{
+  --bg:#0e1426; --surface:#18203a; --fg:#eef0fa; --muted:#a5adc7; --line:#2b3558;
+  --grid:rgba(140,165,255,.07);
+  --hl:#ffd23f; --hl-ink:#13203f;
+  --promo:#34d17a; --promo-ink:#07210f;
+  --band:#3558ff; --blue:#6f8bff; --blue-ink:#0e1426; --pen:#ff6b78;
+  --display:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --hand:'Caveat','Segoe Print',cursive;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:28px 28px;
+  color:var(--fg);font:16px/1.6 var(--body);margin:0;padding-inline:16px;
+}
+.wrap{max-width:1080px;margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:800;text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+a{color:inherit}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+mark.hl{background:var(--band);color:var(--fg);padding:0 .12em;border-radius:3px}
+
+/* header */
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:18px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--fg);padding:8px 14px;border-radius:999px;color:var(--bg)!important;font-weight:800;text-decoration:none;font-family:var(--display)}
+.top a.back{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:600}
+.top a.back:hover{color:var(--fg)}
+
+/* contagem */
+.alert{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.alert .tag{background:var(--promo-ink);color:var(--promo);font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:99px;animation:pulse 1.6s ease-in-out infinite}
+.alert span{color:var(--muted);font-size:.9rem}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+
+/* botões */
+.btn{font:700 1rem var(--body);border:2px solid var(--fg);background:var(--blue);color:var(--blue-ink);padding:13px 22px;border-radius:12px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:4px 4px 0 var(--fg);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--fg)}
+.btn:focus-visible{outline:3px solid var(--hl);outline-offset:3px}
+.btn.gold{background:var(--hl);color:var(--hl-ink)}
+@media (prefers-reduced-motion:reduce){.btn,.alert .tag{transition:none;animation:none}}
+
+/* hero */
+.hero{padding-block:24px 40px;max-width:760px}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem);letter-spacing:-.03em;margin-block:14px 18px}
+.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:52ch}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;align-items:center}
+.chip{font-size:.78rem;font-weight:700;border:1.5px solid var(--line);border-radius:99px;padding:4px 12px;color:var(--muted)}
+.chip.promo{background:var(--promo-ink);color:var(--promo);border-color:transparent}
+
+/* números */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;border-block:1.5px solid var(--line);padding-block:24px;margin-top:8px}
+@media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stats div{min-width:0}
+.stats b{display:block;font:800 1.9rem/1.1 var(--display);letter-spacing:-.02em}
+.stats small{color:var(--muted);font-size:.84rem}
+
+section{padding-block:60px 6px}
+.sec-head{display:grid;gap:10px;margin-bottom:28px;max-width:760px}
+.sec-head h2{font-size:clamp(1.8rem,4.4vw,2.9rem)}
+.sec-head p{color:var(--muted)}
+.prose{max-width:64ch;display:grid;gap:14px;color:var(--muted)}
+.prose strong{color:var(--fg)}
+
+/* passos = as 7 peças */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;max-width:820px}
+.step{display:grid;grid-template-columns:auto 1fr;gap:14px;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px}
+.step .n{width:38px;height:38px;border-radius:10px;background:var(--blue);color:var(--blue-ink);display:grid;place-items:center;font:800 1.15rem var(--display)}
+.step div{min-width:0}
+.step h3{font-size:1.12rem;margin-bottom:4px}
+.step p{font-size:.94rem;color:var(--muted)}
+
+/* antes e depois */
+.ba{display:grid;gap:12px;max-width:900px}
+@media(min-width:760px){.ba{grid-template-columns:1fr 1fr}}
+.m{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:16px;min-width:0}
+.m .tag{font-family:var(--hand);font-size:1.2rem;display:block;margin-bottom:6px}
+.m.bad .tag{color:var(--pen)}
+.m.good .tag{color:var(--promo)}
+.m.good{border-color:rgba(52,209,122,.4)}
+.m q{font-size:.97rem;display:block;quotes:"“" "”"}
+.m .why{font-size:.84rem;color:var(--muted);margin-top:10px}
+
+/* para quem */
+.two{display:grid;gap:12px;max-width:900px}
+@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.two h3{font-size:1.05rem;margin-bottom:10px}
+.two ul{margin:0;padding-left:18px;color:var(--muted);font-size:.94rem}
+.two li+li{margin-top:7px}
+
+/* preço */
+.buy{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:26px 22px;max-width:520px;display:grid;gap:4px;justify-items:start}
+.buy .old{color:var(--muted);font-size:.95rem}
+.buy .now{font:800 2.6rem/1 var(--display);color:var(--promo);letter-spacing:-.02em}
+.buy .sub{color:var(--muted);font-size:.9rem;margin-top:6px}
+.buy .btn{margin-top:16px;width:100%;justify-content:center}
+.buy .pay{font-size:.8rem;color:var(--muted);margin-top:10px}
+
+/* faq */
+.faq{display:grid;gap:10px;max-width:760px}
+details{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:0}
+summary{cursor:pointer;font-weight:700;padding:14px 18px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--display);font-size:1.3rem;line-height:1;color:var(--blue)}
+details[open] summary::after{content:"–"}
+summary:focus-visible{outline:2px solid var(--blue);outline-offset:-2px;border-radius:12px}
+details p{padding:0 18px 16px;color:var(--muted);font-size:.95rem}
+
+.final{margin-top:40px;display:grid;gap:16px;justify-items:start;max-width:760px}
+footer{padding-block:34px 40px;color:var(--muted);font-size:.85rem;display:grid;gap:6px;border-top:1.5px solid var(--line);margin-top:56px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <a class="pill" href="https://rotaenem-ebooks.netlify.app/">Rota ENEM</a>
+    <a class="back" href="https://rotaenem-ebooks.netlify.app/">Ver todos os ebooks →</a>
+  </header>
+
+  <div class="hero">
+    <div class="alert">
+      <span class="tag" id="tag-dias">Faltam 37 dias</span>
+      <span>para o primeiro dia de prova</span>
+    </div>
+    <p class="eyebrow">Guia rápido de redação</p>
+    <h1>Como estruturar a redação <mark class="hl">nota 1000</mark> em 30 minutos</h1>
+    <p class="lead">Não dá mais tempo de aprender redação do zero. Dá tempo de aprender o esqueleto — e ele é o mesmo em todo tema que cai.</p>
+    <div class="cta-row">
+      <a class="btn" href="#" data-checkout>Quero a estrutura — R$ 9,90</a>
+      <a class="btn ghost" href="#pecas" style="background:var(--surface);color:var(--fg)">Ver o que vem dentro</a>
+    </div>
+    <div class="meta">
+      <span class="chip">PDF · 14 páginas</span>
+      <span class="chip promo">R$ 9,90</span>
+      <span class="chip">Acesso imediato</span>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div><b>7</b><small>peças de estrutura</small></div>
+    <div><b>30 min</b><small>de leitura</small></div>
+    <div><b>5</b><small>competências cobertas na forma</small></div>
+    <div><b>200</b><small>pontos só na proposta</small></div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">O diagnóstico</p>
+      <h2>O problema não é falta de conteúdo.</h2>
+    </div>
+    <div class="prose">
+      <p>Você lê o tema, entende o assunto, tem o que dizer. Mas na hora de escrever, trava. Fica olhando a folha, escreve três linhas, risca, começa de novo.</p>
+      <p>Não é falta de repertório. É não saber <strong>onde cada coisa vai</strong>.</p>
+      <p>O corretor não procura genialidade. Ele procura estrutura: tese clara, dois argumentos diferentes entre si, repertório explicado e proposta de intervenção completa. Isso tem forma fixa. E forma se copia.</p>
+    </div>
+  </section>
+
+  <section id="pecas">
+    <div class="sec-head">
+      <p class="eyebrow">O que vem dentro</p>
+      <h2>As 7 peças que você leva.</h2>
+      <p>Catorze páginas. Você lê em 30 minutos e sai sabendo montar qualquer redação.</p>
+    </div>
+    <ol class="steps">
+      <li class="step"><span class="n">1</span><div><h3>O esqueleto dos 4 parágrafos</h3><p>A função e o número de linhas de cada um, e as quatro partes que todo parágrafo de desenvolvimento precisa ter.</p></div></li>
+      <li class="step"><span class="n">2</span><div><h3>A fórmula da tese</h3><p>A frase que organiza o texto inteiro e já diz ao corretor o que vem nos parágrafos seguintes.</p></div></li>
+      <li class="step"><span class="n">3</span><div><h3>4 formas de abrir a introdução</h3><p>Por repertório, por contraste, por contextualização ou por dado — cada uma com frase-modelo pronta.</p></div></li>
+      <li class="step"><span class="n">4</span><div><h3>A fórmula da proposta de intervenção</h3><p>Agente, ação, meio, detalhamento e finalidade. É onde mais gente perde 200 pontos sem perceber.</p></div></li>
+      <li class="step"><span class="n">5</span><div><h3>8 repertórios coringa</h3><p>Leis, autores e obras com a ideia central resumida e os temas em que cada um encaixa.</p></div></li>
+      <li class="step"><span class="n">6</span><div><h3>A divisão do tempo da prova</h3><p>Quanto gastar lendo, planejando, escrevendo e passando a limpo, com o esquema de 10 minutos que evita travar.</p></div></li>
+      <li class="step"><span class="n">7</span><div><h3>O checklist dos últimos 10 minutos</h3><p>O que conferir antes de entregar, incluindo os 9 casos que zeram a redação.</p></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Um exemplo</p>
+      <h2>A mesma conclusão, antes e depois da peça 4.</h2>
+    </div>
+    <div class="ba">
+      <div class="m bad">
+        <span class="tag">antes</span>
+        <q>Portanto, o governo deve fazer alguma coisa e a sociedade deve ajudar. Só assim teremos um Brasil melhor.</q>
+        <p class="why">Agente vago, ação vaga, sem meio, sem finalidade, sem detalhamento.</p>
+      </div>
+      <div class="m good">
+        <span class="tag">depois</span>
+        <q>Portanto, cabe ao Ministério Público, em parceria com as prefeituras, intensificar a fiscalização dos locais com suspeita de exploração, mediante denúncias e vistorias periódicas, a fim de proteger crianças e adolescentes.</q>
+        <p class="why">Os cinco elementos, na ordem. Mesmo tempo para escrever.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Antes de comprar</p>
+      <h2>Para quem este material serve.</h2>
+    </div>
+    <div class="two">
+      <div class="m">
+        <h3>Serve para você se</h3>
+        <ul>
+          <li>Você já estudou, mas trava na hora de organizar o texto</li>
+          <li>Sua nota fica presa entre 600 e 800 e você não sabe por quê</li>
+          <li>Você nunca sabe como começar a introdução</li>
+          <li>Sua conclusão sempre termina em “o governo deve agir”</li>
+        </ul>
+      </div>
+      <div class="m">
+        <h3>Não serve se</h3>
+        <ul>
+          <li>Você procura correção individual de redação — aqui não tem</li>
+          <li>Você quer um texto pronto para decorar; texto decorado pode ser lido como desconectado do tema e derrubar a nota</li>
+          <li>Você espera que só ler resolva. Sem escrever, nada muda</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar">
+    <div class="sec-head">
+      <p class="eyebrow">Pegar agora</p>
+      <h2>Ainda dá tempo de escrever quatro ou cinco redações.</h2>
+      <p>Mas só se você começar esta semana.</p>
+    </div>
+    <div class="buy">
+      <span class="old">Estrutura 1000 · PDF com as 7 peças</span>
+      <span class="now">R$ 9,90</span>
+      <p class="sub">Pagamento único. O PDF chega no seu e-mail logo após a confirmação.</p>
+      <a class="btn gold" href="#" data-checkout>Quero a estrutura por R$ 9,90</a>
+      <p class="pay">Pix · Cartão de crédito · Entrega automática</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <p class="eyebrow">Dúvidas comuns</p>
+      <h2>O que as pessoas perguntam.</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Como recebo o material?</summary><p>Por e-mail, em PDF, assim que o pagamento for confirmado. No Pix costuma levar menos de um minuto. Dá para ler no celular, no computador ou imprimir.</p></details>
+      <details><summary>Isso é um curso?</summary><p>Não. São 14 páginas com as fórmulas e os moldes da estrutura. Nada de videoaula, nada de plataforma. Você abre, lê em 30 minutos e aplica na mesma tarde.</p></details>
+      <details><summary>Serve para outros vestibulares?</summary><p>A estrutura dissertativo-argumentativa serve para a maioria deles. Mas as regras aqui seguem a cartilha do ENEM, em especial a proposta de intervenção, que é exigência do ENEM e não de todo vestibular.</p></details>
+      <details><summary>Garante nota 1000?</summary><p>Não, e desconfie de quem garantir. O material resolve a estrutura, que é onde a maioria trava. A nota depende do seu treino daqui até a prova.</p></details>
+      <details><summary>E se eu quiser o conteúdo completo?</summary><p>Existe o Redação 1000, o guia completo da Rota ENEM, com as cinco competências destrinchadas, exercícios com gabarito, redações comentadas, temas para treinar e plano de estudo. Ele aparece como opção no checkout, com desconto para quem está levando este material.</p></details>
+    </div>
+  </section>
+
+  <div class="final">
+    <h2>Comece pelo que mais trava a sua redação.</h2>
+    <a class="btn gold" href="#comprar">Quero a estrutura — R$ 9,90</a>
+  </div>
+
+  <footer>
+    <p>Material de estudo independente da Rota ENEM. Sem vínculo com o INEP, o MEC ou o Governo Federal. ENEM é uma marca do INEP.</p>
+    <p>As regras de correção seguem a Cartilha do Participante: A Redação do ENEM, publicada pelo INEP. As regras podem mudar de uma edição para outra — confira sempre a cartilha e o edital do ano da sua prova.</p>
+    <p>Nenhum material garante nota ou aprovação.</p>
+    <p><a href="/privacidade" style="color:inherit">Política de Privacidade</a></p>
+    <p>© Rota ENEM.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  // ---------------------------------------------------------------
+  // COLE AQUI o link do checkout do Estrutura 1000 na Kiwify.
+  // Formato: https://pay.kiwify.com.br/XXXXXXX
+  var CHECKOUT = "https://pay.kiwify.com.br/vNsXmLS";
+  // ---------------------------------------------------------------
+
+  var botoes = document.querySelectorAll('[data-checkout]');
+  if (CHECKOUT) {
+    botoes.forEach(function(b){
+      b.href = window.rotaTrackedUrl(CHECKOUT);
+      b.removeAttribute('data-checkout');
+      /* O evento InitiateCheckout e disparado pelo checkout da Kiwify,
+         pelo navegador e pela API de Conversoes. Nao disparamos aqui
+         para o Meta nao contar a mesma pessoa duas vezes. */
+    });
+  } else {
+    botoes.forEach(function(b){
+      b.setAttribute('aria-disabled','true');
+      b.addEventListener('click', function(e){ e.preventDefault(); });
+    });
+  }
+
+  // Primeiro dia do ENEM 2026: domingo, 8 de novembro (dia da redação).
+  var prova = new Date(2026, 10, 8);
+  var hoje = new Date(); hoje.setHours(0,0,0,0);
+  var dias = Math.round((prova - hoje) / 86400000);
+  var tag = document.getElementById('tag-dias');
+  var alerta = tag.parentNode;
+  if (dias > 1) {
+    tag.textContent = 'Faltam ' + dias + ' dias';
+  } else if (dias === 1) {
+    alerta.innerHTML = ''; tag.textContent = 'A prova é amanhã'; alerta.appendChild(tag);
+  } else if (dias === 0) {
+    alerta.innerHTML = ''; tag.textContent = 'Boa prova!'; alerta.appendChild(tag);
+  } else {
+    alerta.hidden = true;
+  }
+})();
+</script>
+</body>
+</html>
