@@ -40,3 +40,4 @@
     });
   });
 })();
+(function(){var p=location.pathname;function vc(d){if(typeof window.fbq==='function'){try{window.fbq('track','ViewContent',d);}catch(e){}}}if(p.indexOf('estrutura-1000')!==-1){document.addEventListener('DOMContentLoaded',function(){vc({content_ids:['estrutura'],content_name:'Estrutura 1000',content_type:'product',value:9.9,currency:'BRL'});});return;}document.addEventListener('DOMContentLoaded',function(){var s=document.getElementById('ebooks');if(!s||!('IntersectionObserver' in window))return;var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){o.disconnect();vc({content_ids:['redacao','plano','questoes','resumos'],content_name:'Ebooks ENEM',content_type:'product',value:19.99,currency:'BRL'});}},{threshold:0.2});o.observe(s);});})();
